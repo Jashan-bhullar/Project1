@@ -7,7 +7,7 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author jashan
+ * @author jashan, Navdeep Kaur, Gurleen Kaur, Ria
  */
 public enum Suit {
       HEART, SPADE, DIAMOND, CLUB
