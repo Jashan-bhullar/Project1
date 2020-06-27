@@ -7,7 +7,7 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author jashan
+ * @author jashan, Navdeep Kaur, Gurleen Kaur, Ria
  */
 public enum Value {
      TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
