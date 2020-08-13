@@ -124,6 +124,18 @@ public class Deck {
         }
         return totalValue;
     }
+    public void AmountForBet(){
+        System.out.println("The amout of the bet could be 50 ,100,150 or 200");
+        
+    }
+     public String HowWin(){
+        return "You won, because you played well";
+        
+         }
+    public String HowLose(){
+        return "You Lost! try next time with a great experience";
+        
+         }
 
     
 
