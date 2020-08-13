@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+
 /**
  *
  * @author jashan
@@ -22,13 +23,15 @@ public class Blackjack {
         playDeck.shuffle();
 
         Deck CardsOfPlayer = new Deck();
-        double MoneyOfPlayer = 70.0;
+        double MoneyOfPlayer = 200.0;
 
         Deck CardsOfDealer = new Deck();
         Scanner s = new Scanner(System.in);
 
         while(MoneyOfPlayer>0){
             System.out.println("You are having " + MoneyOfPlayer + " dollars, how much would you like to bet?");
+            Deck AmountOfBet = new Deck();
+            AmountOfBet.AmountForBet();
             double playerBetMoney = s.nextDouble();
             boolean end = false;
             if(playerBetMoney > MoneyOfPlayer){
@@ -84,6 +87,9 @@ public class Blackjack {
             //Determine if dealer busted
             if((CardsOfDealer.cardsValue()>21)&& end == false){
                 System.out.println("You win!");
+                Deck youWin = new Deck();
+                System.out.println(youWin.HowWin());
+                
                 MoneyOfPlayer += playerBetMoney;
                 end = true;
             }
@@ -95,24 +101,35 @@ public class Blackjack {
 
             if((CardsOfPlayer.cardsValue() > CardsOfDealer.cardsValue()) && end == false){
                 System.out.println("You win the hand.");
+                 Deck youWin = new Deck();
+                System.out.println(youWin.HowWin());
+                
+                
                 MoneyOfPlayer += playerBetMoney;
                 end = true;
             }
             else if(end == false)
             {
                 System.out.println("Dealer wins.");
+                Deck youLose = new Deck();
+                System.out.println(youLose.HowLose());
+                
+                
                 MoneyOfPlayer -= playerBetMoney;
             }
 
             CardsOfPlayer.moveToDeck(playDeck);
             CardsOfDealer.moveToDeck(playDeck);
             System.out.println("End of Hand.");
+            
+            
 
         }
 
         System.out.println("Game over! Your money is gone");
 
     }
+   
 
 
 }
